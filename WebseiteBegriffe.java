@@ -24,24 +24,15 @@ public class WebseiteBegriffe {
 
         String[] wordsOfText = doc.text().split("(\\s|\\p{Punct})+");
 
-//        System.out.println("\nNumber of words in Array wordsOfText: " + wordsOfText.length);
-//        System.out.println("------------------------------------------------");
-
         filterWordsOfText(wordsOfText);
         
         System.out.println("\nNumber of words (filtered): " + filteredWordsOfText.size());
         System.out.println("------------------------------------------------");
-//        System.out.println("\nFiltered selection:\n\n" + filteredWordsOfText.toString());
         
         makeTopList();
 
         System.out.println("\nNumber of words in a top list (more than 1 time in a text): " + topWords.size());
         System.out.println("-----------------------------------------------------------------");
-
-//        System.out.println("All Words in a top list (more than 1 time in a text): \n");
-//        for (int i = 0; i < topWords.size(); i++) {
-//            System.out.println(topWords.get(i).getWord() + " kommt " + topWords.get(i).getCounter() + " Mal vor");
-//        }
         
         sortTopTenWords();
         
